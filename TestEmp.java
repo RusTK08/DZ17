@@ -11,13 +11,13 @@ public class TestEmp {
         em.add(new Employee("Charlie", 35, 30000));
         Collections.sort(em);
         System.out.println(em);
-        Comparator<Employee> ageComparator = new Comparator<Employee>() {
+        Comparator<Employee> EmployeeSalaryComparator = new Comparator<Employee>() {
             @Override
             public int compare(Employee u1, Employee u2) {
                 return u1.getSalary().compareTo(u2.getSalary());
             }
         };
-        Collections.sort(em, ageComparator);
+        Collections.sort(em, EmployeeSalaryComparator);
         System.out.println(em);
         
         
